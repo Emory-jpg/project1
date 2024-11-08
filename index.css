@@ -1,0 +1,509 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+/* gototop */
+.gototop {
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  z-index: 1100;
+
+  text-align: center;
+}
+.gototopicon {
+  height: 40px;
+}
+.gototop:visited,
+.gototop:link {
+  color: rgb(230, 92, 0);
+  font-size: 15px;
+  font-family: "Kanit", Courier, monospace;
+  font-weight: 900;
+  text-decoration: none;
+}
+/* gototop */
+/* 跑馬字串上 */
+.marquee2-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  transform: translateY(80px);
+}
+.marquee2 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 0;
+
+  /* border: 3px solid rgb(230, 92, 0); 邊框樣式可選 */
+  box-sizing: border-box;
+}
+
+.marquee2 > p {
+  display: inline-block;
+  /* padding-left: 100%; */
+  font-family: 微軟正黑體;
+  font-weight: 900;
+  font-size: 120px;
+  color: rgb(230, 92, 0);
+  padding-top: 12px;
+  /* border: 5px solid rgb(230, 92, 0); */
+  animation: marquee 200s linear infinite;
+}
+/* 跑馬字串上 */
+/* 跑馬字串下 */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+
+  background-color: #f5f3ee; /* 背景顏色可選 */
+  border: 5px solid rgb(230, 92, 0); /* 邊框樣式可選 */
+  box-sizing: border-box;
+}
+
+.marquee > p {
+  display: inline-block;
+  /* padding-left: 100%; */
+  font-family: 微軟正黑體;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(230, 92, 0);
+  padding-top: 12px;
+  animation: marquee 100s linear infinite;
+}
+/* 跑馬字串下 */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* 跑馬字串下 */
+
+@keyframes HOT {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+
+  60% {
+    color: rgb(230, 92, 0);
+  }
+  100% {
+    color: rgb(200, 0, 0);
+  }
+}
+/* 鼠標icon */
+#follow-icon {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  pointer-events: none; /* 確保不干擾滑鼠事件 */
+  transition: transform 0.8s ease-out; /* 平滑跟隨效果 */
+}
+
+#follow-icon > img {
+  width: 40px; /* 圖標的大小 */
+  height: 40px; /* 圖標的大小 */
+}
+/* 鼠標icon */
+body {
+  margin-top: 100px;
+  background-color: #f5f3ee;
+}
+
+.navbar {
+  padding: 10px 0px 30px 50px;
+  /* border: 20px dashed rgb(230, 92, 0); */
+  margin-bottom: 10px;
+  z-index: 100;
+}
+
+.navbar-nav {
+  margin-left: 50%;
+}
+.navbar-brand {
+  /* color: rgb(230, 0, 0); */
+  color: rgb(230, 92, 0);
+  font-family: "bauhaus 93", Courier, monospace;
+  font-size: 50px;
+}
+.navbar-brand:hover {
+  color: rgb(255, 212, 18);
+  font-weight: bolder;
+}
+.nav-brand:visited {
+  color: rgb(230, 92, 0);
+}
+.nav-item {
+  margin-right: 40px;
+}
+.nav-link {
+  color: rgb(230, 92, 0);
+  font-family: 微軟正黑體;
+  text-wrap: nowrap;
+
+  font-weight: bold;
+  font-size: 16px;
+}
+.nav-link:active {
+  color: rgb(230, 92, 0);
+}
+.nav-link:hover {
+  /* border: 8px dotted rgb(255, 217, 0); */
+  border: 8px dotted rgb(230, 92, 0);
+  border-radius: 100px;
+
+  /* background-color: rgb(230, 92, 0); */
+  border-radius: 30px;
+  font-size: 20px;
+  color: rgb(230, 92, 0);
+}
+
+/* 以上是Navbar */
+.first {
+  margin-top: 300px;
+  animation-name: HOT;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-image: url(./image/pizza-making-gettyimages-200287664-001-1.webp);
+  height: 500px;
+  border-radius: 800px;
+  position: static;
+}
+
+.menutext {
+  /* border: 2px solid black; */
+  text-align: center;
+  translate: 0px -570px;
+  color: rgb(230, 92, 0);
+  font-family: "Kanit", Courier, monospace;
+  font-weight: 600;
+  z-index: 1;
+}
+.menu {
+  text-decoration: none;
+}
+.ld-jump {
+  animation-duration: 2s;
+}
+.firsth1 {
+  /* color: rgb(200, 0, 0); */
+
+  font-family: "Kanit", Courier, monospace;
+  font-weight: 900;
+  font-size: 80px;
+  padding-top: 50px;
+  text-align: center;
+}
+.first:hover {
+  /* border: 20px dotted rgb(255, 217, 0); */
+  box-shadow: 0px 0px 0px 30px rgb(255, 237, 133);
+}
+
+/* 實驗 */
+
+/* 以上是首頁大圖跟文字 */
+.m2 {
+  margin-top: 300px;
+  background-color: rgb(230, 92, 0);
+  height: 150px;
+  border-radius: 100px;
+}
+.m2:hover {
+  border: 20px dotted rgb(255, 217, 0);
+  height: 800px;
+}
+
+.m2-title {
+  padding-top: 30px;
+  font-family: 微軟正黑體;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  text-wrap: nowrap;
+  /* border: 2px solid black; */
+}
+
+.m2box {
+  margin-top: 200px;
+  border: 2px solid blac;
+  display: flex;
+  flex-direction: row;
+  visibility: hidden;
+}
+
+.m2-left > .abouttitle {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: 微軟正黑體;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  visibility: hidden;
+}
+.m2-left > .aboutcontent {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-wrap: wrap;
+  font-family: 微軟正黑體;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: start;
+  text-wrap: wrap;
+  line-height: 50px;
+  visibility: hidden;
+  /* border: 2px solid black; */
+}
+.m2-left {
+  flex: 2;
+  translate: 0 -50px;
+  visibility: hidden;
+}
+.m2-right {
+  flex: 1;
+  margin-right: 20px;
+  visibility: hidden;
+  /* border: 2px solid black; */
+}
+.m2-right > img {
+  margin-left: 100px;
+  border-radius: 20px;
+  width: 400px;
+  visibility: hidden;
+}
+.m2:hover .m2box,
+.m2:hover .m2-left > .abouttitle,
+.m2:hover .m2-left > .aboutcontent,
+.m2:hover .m2-left,
+.m2:hover .m2-right,
+.m2:hover .m2-right > img {
+  visibility: visible;
+}
+/* @media screen and (max-width: 768px) {
+  .firsth1 {
+    font-size: 70px;
+  }
+  .m2-img {
+    width: 200px;
+  }
+  .m2-left {
+    font-size: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+} */
+.store-title {
+  position: relative;
+  top: 1080px;
+}
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 使用视口高度，使容器占满整个视口 */
+  margin: 0; /* 清除默认的 margin */
+}
+#store-carousel {
+  margin-top: 800px;
+}
+.store-item {
+  width: 60vw;
+  height: 60vh;
+  /* border: 2px solid black; */
+}
+.store-img {
+  height: 100%;
+  object-fit: cover;
+}
+.location {
+  display: flex;
+  margin-top: 600px;
+  height: 800px;
+  /* border: 2px solid black; */
+  border-radius: 30px 30px 0 0;
+  /* background-color: rgb(230, 92, 0); */
+}
+.locationleft {
+  border-top: 2px solid rgb(230, 92, 0);
+  border-right: 2px solid rgb(230, 92, 0);
+  flex: 1;
+}
+.locationright {
+  border-top: 2px solid rgb(230, 92, 0);
+  flex: 1;
+}
+.opencontent {
+  margin-top: 150px;
+  list-style-type: none;
+}
+.opencontent > li {
+  color: rgb(230, 92, 0);
+  font-family: 微軟正黑體;
+  text-align: center;
+}
+.map {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.openitem {
+  font-weight: 900;
+  margin-top: 60px;
+  font-size: 20px;
+}
+.opentext {
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.locationbg {
+  background-color: rgb(230, 92, 0);
+}
+.location {
+  /* border: 2px solid rgb(230, 92, 0); */
+  border-radius: 0 0 100px 100px;
+  background-color: #f5f3ee;
+  overflow: hidden;
+}
+footer {
+  height: 800px;
+  background-color: rgb(230, 92, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footericon {
+  margin-top: 100px;
+}
+.footericon > a {
+  margin-right: 50px;
+}
+.footerlogo {
+  color: #f5f3ee;
+  font-family: "bauhaus 93", Courier, monospace;
+  font-size: 200px;
+  text-align: center;
+  padding-top: 180px;
+  /* border: 2px solid rgb(255, 255, 255); */
+}
+
+@media (max-width: 992px) {
+  .marquee2 > p {
+    font-size: 80px;
+    animation: marquee 180s linear infinite;
+  }
+  .menutext {
+    font-size: 35px;
+    /* border: 2px solid black; */
+  }
+  .m2-title {
+    padding-top: 30px;
+    font-family: 微軟正黑體;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    text-wrap: nowrap;
+    /* border: 2px solid black; */
+  }
+  .m2-left > .abouttitle {
+    font-size: 30px;
+  }
+  .m2-left > .aboutcontent {
+    font-size: 20px;
+  }
+  .footerlogo {
+    color: #f5f3ee;
+    font-family: "bauhaus 93", Courier, monospace;
+    font-size: 160px;
+    text-align: center;
+    padding-top: 80px;
+    /* border: 2px solid rgb(255, 255, 255); */
+  }
+  .marquee {
+    border: 3px solid rgb(230, 92, 0); /* 邊框樣式可選 */
+  }
+
+  .marquee > p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 880px) {
+  .marquee2 > p {
+    font-size: 80px;
+    animation: marquee 180s linear infinite;
+  }
+  .menutext {
+    font-size: 35px;
+    /* border: 2px solid black; */
+  }
+  .m2:hover {
+    border: 15px dotted rgb(255, 217, 0);
+    height: 800px;
+  }
+  .m2-left > .abouttitle {
+    font-size: 26px;
+  }
+  .m2-left > .aboutcontent {
+    font-size: 16px;
+  }
+  .m2-right > img {
+    width: 360px;
+  }
+  .openitem {
+    font-weight: 900;
+    margin-top: 60px;
+    font-size: 18px;
+  }
+  .footerlogo {
+    font-size: 120px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 880px) {
+  .m2-left > .abouttitle {
+    font-size: 26px;
+  }
+  .m2-left > .aboutcontent {
+    font-size: 15px;
+  }
+  .m2-left {
+    flex: 3;
+  }
+  .m2-right {
+    flex: 1;
+  }
+}
+@media (max-width: 768px) {
+  .m2-right {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .m2-right {
+    display: none;
+  }
+  .firsth1 {
+    font-family: "Kanit", Courier, monospace;
+    font-weight: 900;
+    font-size: 60px;
+    padding-top: 55px;
+    text-align: center;
+  }
+  .menutext {
+    font-size: 30px;
+    /* border: 2px solid black; */
+  }
+}

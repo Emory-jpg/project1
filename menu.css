@@ -1,0 +1,315 @@
+body {
+  background-color: #fffdf9;
+}
+/* 鼠標icon */
+#follow-icon {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  pointer-events: none; /* 確保不干擾滑鼠事件 */
+  transition: transform 0.8s ease-out; /* 平滑跟隨效果 */
+  z-index: -1;
+}
+
+#follow-icon > img {
+  width: 40px; /* 圖標的大小 */
+  height: 40px; /* 圖標的大小 */
+}
+/* 鼠標icon */
+/* gototop */
+/* .gototop {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1100;
+
+  text-align: center;
+}
+.gototopicon {
+  height: 40px;
+}
+.gototop:visited,
+.gototop:link {
+  color: rgb(230, 92, 0);
+  font-size: 15px;
+  font-family: "Kanit", Courier, monospace;
+  font-weight: 900;
+  text-decoration: none;
+} */
+/* gototop */
+
+.closediv:hover {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: antiquewhite;
+  /* border: 2px solid black; */
+}
+.closex {
+  position: fixed;
+  font-family: "微軟正黑體";
+  font-weight: 900;
+  font-size: 60px;
+  padding-left: 25px;
+  margin: 0;
+}
+
+.closebtn:visited,
+.closebtn:link {
+  color: rgb(230, 92, 0);
+  text-decoration: none;
+}
+.bodyall {
+  display: flex;
+}
+.body-left {
+  flex: 2;
+  /* border: 2px solid black; */
+}
+.body-right {
+  flex: 6;
+  /* border: 2px solid black; */
+}
+.listall {
+  border: 2px solid rgb(230, 92, 0);
+}
+.list1 {
+  list-style-type: none;
+  border-bottom: 2px solid rgb(230, 92, 0);
+}
+.list2 {
+  display: flex;
+  /* border: 2px solid black; */
+}
+.list-content {
+  flex: 1;
+}
+.list-img {
+  flex: 1;
+}
+.pizzatitle {
+  color: rgb(230, 92, 0);
+  font-family: "Kanit", Courier, monospace;
+  font-weight: 900;
+  font-size: 30px;
+  /* border: 2px solid black; */
+}
+.pizzadescription {
+  color: rgb(230, 92, 0);
+  font-family: "Kanit", Courier, monospace;
+  font-weight: 900;
+  font-size: 15px;
+  /* border: 2px solid black; */
+}
+.pizzaprice {
+  color: rgb(230, 92, 0);
+  font-family: "Kanit", Courier, monospace;
+  font-weight: 800;
+  font-size: 20px;
+  /* border: 2px solid black; */
+}
+.pizzaimg {
+  height: 250px;
+  animation: none;
+}
+.listall:hover {
+  border: 10px solid rgb(230, 92, 0);
+}
+
+.pizzaimg:hover {
+  border: 20px dotted orangered;
+  border-radius: 80%;
+
+  animation: ld-bounceAlt 0.5s infinite linear;
+}
+
+@keyframes ld-bounceAlt {
+  0% {
+    animation-timing-function: cubic-bezier(0.1348, 0.3256, 0.2495, 0.8687);
+    transform: translate(0, 0%);
+  }
+  51% {
+    animation-timing-function: cubic-bezier(0.7426, 0.1782, 0.8523, 0.6514);
+    transform: translate(0, -14%);
+  }
+  100% {
+    transform: translate(0, 0%);
+  }
+}
+
+/* 跑馬字串 */
+.marquee-container {
+  position: fixed;
+  top: 0;
+  left: 20;
+  /* border: 2px solid black; */
+  width: 100%;
+
+  overflow: hidden;
+  display: flex;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: top left;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 0;
+  box-sizing: content-box;
+  border-top: 5px solid rgb(255, 136, 57);
+  border-bottom: 5px solid rgb(255, 136, 57);
+}
+
+.marquee > p {
+  display: inline-block;
+  /* padding-left: 100%; */
+  font-family: 微軟正黑體;
+  font-weight: 900;
+  font-size: 120px;
+  color: rgb(255, 206, 173);
+  padding-top: 12px;
+  /* border: 5px solid rgb(230, 92, 0); */
+  animation: marquee 300s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* 跑馬字串 */
+
+@media (max-width: 1800px) {
+  .marquee > p {
+    display: inline-block;
+    /* padding-left: 100%; */
+    font-family: 微軟正黑體;
+    font-weight: 900;
+    font-size: 80px;
+    color: rgb(255, 206, 173);
+    margin-top: 150px;
+    /* border: 5px solid rgb(230, 92, 0); */
+    animation: marquee 300s linear infinite;
+  }
+}
+@media (max-width: 1450px) {
+  .marquee {
+    border: none;
+  }
+  .marquee > p {
+    display: inline-block;
+    /* padding-left: 100%; */
+    font-family: 微軟正黑體;
+    font-weight: 900;
+    font-size: 80px;
+    color: rgb(255, 206, 173);
+    margin-top: 150px;
+    /* border: 5px solid rgb(230, 92, 0); */
+    animation: marquee 300s linear infinite;
+  }
+  .pizzaimg {
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+}
+@media (max-width: 1200px) {
+  .marquee {
+    border: none;
+  }
+  .marquee > p {
+    display: inline-block;
+    /* padding-left: 100%; */
+    font-family: 微軟正黑體;
+    font-weight: 900;
+    font-size: 80px;
+    color: rgb(255, 206, 173);
+    margin-top: 100px;
+    /* border: 5px solid rgb(230, 92, 0); */
+    animation: marquee 300s linear infinite;
+  }
+  .pizzaimg {
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+}
+@media (max-width: 992px) {
+  .marquee {
+    border: none;
+  }
+  .marquee > p {
+    display: inline-block;
+    /* padding-left: 100%; */
+    font-family: 微軟正黑體;
+    font-weight: 800;
+    font-size: 60px;
+    color: rgb(255, 206, 173);
+    margin-top: 50px;
+    /* border: 5px solid rgb(230, 92, 0); */
+    animation: marquee 250s linear infinite;
+  }
+  .pizzaimg {
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee {
+    border: none;
+  }
+  .marquee > p {
+    display: inline-block;
+    /* padding-left: 100%; */
+    font-family: 微軟正黑體;
+    font-weight: 800;
+    font-size: 60px;
+    color: rgb(255, 206, 173);
+    margin-top: 50px;
+    /* border: 5px solid rgb(230, 92, 0); */
+    animation: marquee 250s linear infinite;
+  }
+  .pizzatitle {
+    font-size: 25px;
+  }
+  .pizzaimg {
+    height: 120px;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .marquee {
+    transform: translateX(0%);
+  }
+  .marquee > p {
+    display: inline-block;
+    /* padding-left: 100%; */
+    font-family: 微軟正黑體;
+    font-weight: 800;
+    font-size: 50px;
+    color: rgb(255, 206, 173);
+    margin-top: 20px;
+    /* border: 5px solid rgb(230, 92, 0); */
+    animation: marquee 200s linear infinite;
+  }
+  .pizzatitle {
+    font-size: 20px;
+  }
+  .pizzadescription {
+    font-size: 15px;
+  }
+  .pizzaprice {
+    font-size: 18px;
+  }
+  .pizzaimg {
+    height: 90px;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+}
